@@ -7,4 +7,4 @@ RUN npm config set prefix '/home/vapid/.npm-global'
 RUN npm install -g vapid-cli
 ENV PATH="/home/vapid/.npm-global/bin:$PATH"
 RUN vapid new /home/vapid/root/
-CMD vapid start
+CMD vapid start /home/vapid/root/
