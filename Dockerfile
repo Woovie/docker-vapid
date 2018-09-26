@@ -1,4 +1,4 @@
-FROM node:latest
+FROM woovie/alpine-supervisord
 ENV USER "vapid"
 ENV PORT 3000
 RUN adduser --system --group ${USER}
