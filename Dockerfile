@@ -1,7 +1,7 @@
 FROM woovie/alpine-supervisord
 ENV USER "vapid"
 ENV PORT 3000
-RUN adduser --system --group ${USER}
+RUN adduser -S ${USER}
 USER ${USER}
 RUN mkdir /home/${USER}/.npm-global/
 ENV NPM_CONFIG_PREFIX "/home/${USER}/.npm-global"
