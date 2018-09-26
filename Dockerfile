@@ -10,4 +10,4 @@ RUN npm install -g vapid-cli
 ENV PATH "/home/${USER}/.npm-global/bin:$PATH"
 EXPOSE ${PORT}
 ENTRYPOINT vapid
-CMD vapid --version
+CMD supervisord -c /etc/supervisor/supervisord.conf
