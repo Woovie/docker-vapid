@@ -8,6 +8,6 @@ ENV NPM_CONFIG_PREFIX "/home/${USER}/.npm-global"
 RUN npm config set prefix "/home/${USER}/.npm-global"
 RUN npm install -g vapid-cli
 ENV PATH "/home/${USER}/.npm-global/bin:$PATH"
-RUN vapid new /home/${USER}/root/
 EXPOSE ${PORT}
-CMD vapid start /home/${USER}/root/
+ENTRYPOINT vapid
+CMD vapid --version
