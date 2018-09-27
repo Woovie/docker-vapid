@@ -20,5 +20,5 @@ USER ${USER}
 
 ENV PATH "/home/${USER}/.npm-global/bin:$PATH"
 EXPOSE ${PORT}
-ENTRYPOINT vapid
-CMD supervisord -c /etc/supervisor/supervisord.conf
+ENTRYPOINT ["vapid"]
+CMD ["--version"]
