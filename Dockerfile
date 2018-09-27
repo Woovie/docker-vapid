@@ -11,11 +11,11 @@ RUN npm config set prefix "/home/${USER}/.npm-global"
 
 
 USER root
-apk add --no-cache --virtual .build-deps alpine-sdk python
+RUN apk add --no-cache --virtual .build-deps alpine-sdk python
 USER ${USER}
 RUN npm install -g vapid-cli
 USER root
-apk del .build-deps
+RUN apk del .build-deps
 USER ${USER}
 
 ENV PATH "/home/${USER}/.npm-global/bin:$PATH"
